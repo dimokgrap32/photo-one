@@ -1,0 +1,8 @@
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcodeproj/xcshareddata/xcschemes/*.xcscheme.bak
+Payload/
+*.ipa
+.DS_Store
