@@ -94,7 +94,10 @@ enum PhotoEngine {
 
         if state.autoApplied {
             for filter in image.autoAdjustmentFilters() {
-                output = output.applyingFilter(filter)
+                filter.setValue(output, forKey: kCIInputImageKey)
+                if let result = filter.outputImage {
+                    output = result
+                }
             }
         }
 
